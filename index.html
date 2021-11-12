@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h2 style="text-align: center;">Different Way to add Listener</h2>
+    <div style="border: 1px solid red; margin: 10px; padding: 20px; border-radius: 20px;">
+        <h3>Event Listener Way 1</h3>
+        <p>Use built in js function in inline</p>
+        <button onclick="alert('Hi')">Click me</button>
+
+    </div>
+    <div style="border: 1px solid green; margin: 10px; padding: 20px; border-radius: 20px;">
+        <h3>Event Listener Way 2</h3>
+        <p>Use User defined function in inline</p>
+        <button onclick="sayHi()">Click me</button>
+
+    </div>
+    <div style="border: 1px solid tomato; margin: 10px; padding: 20px; border-radius: 20px;">
+        <h3>Event Listener Way 3</h3>
+        <p>With the help of id and getElementById</p>
+        <button id="thirdButton">Click me</button>
+
+    </div>
+    <div style="border: 1px solid gold; margin: 10px; padding: 20px; border-radius: 20px;">
+        <h3>Event Listener Way 4</h3>
+        <p>Use addEventListener</p>
+        <button id="forthButton">Click me</button>
+
+    </div>
+    
+
+
+    <script>
+        // For second Button
+        function sayHi(){
+            alert('Hi');
+        }
+        // For Third Button
+
+        /*
+        function sayHi(){
+            alert('Hi');
+        }
+        document.getElementById('thirdButton').onclick = sayHi;
+        */
+        //or
+        document.getElementById('thirdButton').onclick = function(){
+            alert('Hi');
+        }
+
+        // For Forth Button
+
+        /*
+        function tellHi(){
+            alert('Hi');
+        }
+        document.getElementById('forthButton').addEventListener('click', tellHi);
+        */
+
+       //or
+
+       document.getElementById('forthButton').addEventListener('click',function(){
+            alert('Hi');
+       });
+        
+    </script>
+</body>
+</html>
